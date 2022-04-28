@@ -44,9 +44,9 @@ return false;
 }
 }
 function rezultats(){
-    m1=m.m1;m2=m.m2;m3=m.m3;
+    m1=m.m1; m2=m.m2; m3=m.m3;
     console.log(m1,m2,m3);
-    if(nolasa()){
+    if(!nolasa()){
         t="Nekorekti ievaddati, trijstūra malu vērtībām ir jābūt lielākām par 0";
     }else{
         if(trijstūris(m1,m2,m3)==false){
@@ -65,7 +65,7 @@ function rezultats(){
         const s=Math.round(laukums(m1,m2,m3)*100)/100;
         t+="Perimetrs ir"+p+"un laukums ir "+s+".";
     }
-
+}
 console.log(t);
 return t
 }
@@ -74,6 +74,6 @@ function izvade(){
     console.log(teksts);
     const sakne=document.getElementById("izvade");
     const raksti=document.createElement("p")
+    raksti.innerHTML=teksts;
     sakne.appendChild(raksti);
-}
 }
